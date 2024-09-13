@@ -37,6 +37,11 @@ document.querySelector(".btnNewGrid").addEventListener("click", () => {
     }
 })
 
-
+document.querySelector(".btnClearGrid").addEventListener("click", () => {
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => {
+        box.style.backgroundColor = "";
+    });
+});
 
 generateGrid(16)
