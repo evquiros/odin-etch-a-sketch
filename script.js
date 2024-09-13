@@ -28,5 +28,15 @@ function generateGrid(x){
     }
 }
 
+document.querySelector(".btnNewGrid").addEventListener("click", () => {
+    const size = parseInt(prompt("Number of squares per side for the new grid: "));
+    if (!isNaN(size) && size > 0 && size <= 100) {
+        generateGrid(size);
+    } else {
+        alert("Please use a valid number.");
+    }
+})
+
+
 
 generateGrid(16)
